@@ -1,0 +1,13 @@
+<%- include('header'); -%>
+<form class="m-5">
+  <div class="form-group" action="/signUpPage" method="post">
+    <label>Email address</label>
+    <input type="email" class="form-control" name="urEmail" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" name="Password" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>

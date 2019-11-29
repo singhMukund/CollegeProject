@@ -1,0 +1,41 @@
+<%- include('header'); -%>
+  <div style="background-color:#F0F0F2">
+    <div class="container" >
+        <div class="row">
+            <h3>Home</h3>
+            <p> <%= startingContent %> </p>
+        </div>
+   </div>
+
+
+        <%  posts.forEach(function(post){ %>
+    <div class="container" style="border: .05px #D7D6D6 solid; margin-top: 5px; padding: 10px 25px 2px; background-color:#FDFDFF;
+    box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0, 0.2);
+    border-radius: 0.5em;
+     ">
+              <div class="row  text-dark">
+                <h3 ><kbd><%=post.title%></kbd></h3>
+                <p>
+                   <%=post.content%>
+                    <a href="/posts/<%=post._id%>"><kbd>Read More</kbd></a>
+                </p>
+              </div>
+             <div class="row" style="font-size:20px; color:white; border-top:1px black solid ">
+                <div class="col-sm">
+                      <a href="#"><i class="glyphicon glyphicon-thumbs-up text-dark" ></i> <b class="text-dark">Like</b></a>
+                </div>
+                <div class="col-sm">
+                      <a href="#"><i class="glyphicon glyphicon-comment text-dark" ></i> <b class="text-dark">Comment</b></a>
+                </div>
+               <div class="col-sm">
+                      <a href="#"><i class="glyphicon glyphicon-share-alt text-dark" ></i><b class="text-dark">Share</b> </a>
+               </div>
+            </div>
+      </div>
+        <% }) %>
+
+  </div>
+
+
+
+<%- include('footer'); -%>
